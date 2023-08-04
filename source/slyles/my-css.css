@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300;1,400&family=Michroma&family=Noto+Sans+Syriac+Eastern:wght@500;700&family=Oswald:wght@300;400;600&family=Sansita+Swashed:wght@300;700&display=swap');
+
+body {
+  background: linear-gradient(90deg, #ffb7b7 0%, #228100 100%);
+  /*градиент*/
+  font-family: 'Michroma', sans-serif;
+}
+
+p {
+  color:#fff;
+}
+
+.nav-link {
+  color: aquamarine;
+}
+
+header li a img:hover {
+  opacity: 0.8;
+}
+
+.navbar-nav .nav-link.active {
+  /*далаем так,
+  чтобы вес был больше чем в css от bootstrap*/
+  color: #bababa;
+}
+
+.navbar-brand img {
+  width: 40px;
+}
+
+.navbar-toggler {
+  /*изменение цвета кнопки-бургера*/
+  background-color: #bababa;
+}
+
+.sitebar {
+  color: #fff;
+  background: linear-gradient(270deg, #ffd497 0%, #228100 100%);
+  /*для видимости границ контейнеров*/
+}
+
+.sitebar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sitebar a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.card,
+.btn-outline-primary {
+  background: linear-gradient(270deg, #ffd497 0%, #228100 100%);
+  color: #fff;
+}
+
+.btn-outline-primary:hover {
+  color: #111;
+}
+
+.card a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.slide-text,
+.footer-text {
+  color: #fff;
+  /* margin-inline: auto; - центровка по горизонтали*/
+  /* margin-block: auto; - центровка по вертикали*/
+  margin: auto auto;
+  /*по х и по у задает центральное положение от контейнера,
+   в котором находится тег p*/
+}
+
+.call-anim {
+  animation: call 2s ease 0s infinite normal forwards;
+}
+
+@keyframes call {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
+@media (max-width: 755px) { /*планшеты - 756px*/
+  .carousel-indicators {
+    display: none;
+  } 
+  /*исправление того, что текст налазит
+   на кнопки на  телефонах: просто не отображаем кнопки*/
+}
+
+footer {
+  background-color: #1f1f1f;
+  border-top: solid #424242 5px;
+}
+
+.media-links {
+  display: flex; /*был block*/
+  justify-content: center; /*гориз. центр. (только для flex)*/
+  align-items: center;
+
+}
+
+footer img {
+  cursor: pointer;
+}
+
+footer img:hover{
+  opacity: 0.8; 
+}

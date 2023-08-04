@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="source/slyles/my-css.css">
+  <title>Document</title>
+</head>
+<!--в CSS-Bootstrap прописан сбррос базовых настроек отображения (margin, padding и т.д)-->
+<!--cетка BOOTSTRAP всегда кратна 12-и -->
+
+<body>
+  <header>
+
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="source/files/logo.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a> <!--ссылка на базовый (основной) файл index-->
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link active" href="pricing.html " disabled>Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Сontacts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">
+                <img style="width:35px; margin-inline:1em"  src="source/files/yt.png" alt="...">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">
+                <img style="width:30px; margin-inline:1em" src="source/files/tg.png" alt="...">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+
+  <!--сетка Bootstrap (построена на flex-контейнерах), поделена на 12 столбцов.
+  Адаптивная (т.е. подстраивается под тип устройства, )-->
+  <section>
+
+    <!--container fluid нужен чтобы работать с сеткой bootstap; 
+    из Bootstrap. CSS стили уже автоматически подключены-->
+    <div class="container-fluid mt-4"> <!--m - margin, p - padding. t,b,x,y (em-показатели (rem))-->
+
+      <div class="row"> <!--div - чтобы разбить пространство (отступы, доли, для боковой панели и т.д) -->
+
+        <div class="col-lg-1"> <!--для бокового отступа-->
+        </div>
+
+        <div class="col-lg-8 col-md-12"> <!--карты забирают 8 из 12 долей-->
+          <div class="row"> <!--столбцы не работают без класса row (ряд)-->
+
+            <!--столбец (col-lg-4 - на широких экранах каждая карта будет занимать 4 доли из 12).
+              col-md-6 -на стредних экранах каждая карта будет занимать 6 долей из 12
+            Нужно указывать для того, чтобы карточки отображались кореектно (в одинковом количетсве на ряду 
+            с одинаковыми отступами)--> <!--по умолчанию просто class="col"-->
+            <div class="col-lg-4 col-md-6 mt-4"> <!--добавляем везде margin-top 4 (mt-4)-->
+              <div class="card">
+                <a href="#"><img src="source/images/laptop.png" class="card-img-top" alt="Laptop"></a>
+                <div class="card-body">
+                  <h5 class="card-title"><a href="#">Laptops</a></h5> <!--открыватеся перечень ноутбуков, предлагаемых к продаже-->
+                  <p class="card-text"><a href="#">
+                    Some quick example text to build on the card title and make up the bulk of the
+                      card's
+                    content.</a></p>
+                  <a href="#" class="btn btn-primary">Go Shopping</a> <!--купить-->
+                </div>
+              </div>
+            <a href=""></div></a>
+
+            <div class="col-lg-4 col-md-6 mt-4"> <!--столбец-->
+              <div class="card">
+                <img src="source/images/gaming pc.png" class="card-img-top" alt="Gaming PC">
+                <div class="card-body">
+                  <h5 class="card-title">Gaming PC</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                  <a href="#" class="btn btn-primary">Go Shopping</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mt-4"> <!--столбец-->
+              <div class="card">
+                <img src="source/images/vr.png" class="card-img-top" alt="VR">
+                <div class="card-body">
+                  <h5 class="card-title">VR</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                  <a href="#" class="btn btn-primary">Go Shopping</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mt-4"> <!--столбец-->
+              <div class="card">
+                <img src="source/images/gpu.png" class="card-img-top" alt="GPU">
+                <div class="card-body">
+                  <h5 class="card-title">GPU</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                  <a href="#" class="btn btn-primary">Go Shopping</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mt-4"> <!--столбец-->
+              <div class="card">
+                <img src="source/images/cpu.png" class="card-img-top" alt="CPU">
+                <div class="card-body">
+                  <h5 class="card-title">CPU</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                  <a href="#" class="btn btn-primary">Go Shopping</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mt-4"> <!--столбец-->
+              <div class="card">
+                <img src="source/images/controller.png" class="card-img-top" alt="Cntrollers">
+                <div class="card-body">
+                  <h5 class="card-title">Controllers</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                  <a href="#" class="btn btn-primary">Go Shopping</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mt-4"> <!--столбец-->
+              <div class="card">
+                <img src="source/images/acc.png" class="card-img-top" alt="ACC">
+                <div class="card-body">
+                  <h5 class="card-title">ACC</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                  <a href="#" class="btn btn-primary">Go Shopping</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mt-4"> <!--столбец-->
+              <div class="card">
+                <img src="source/images/other.png" class="card-img-top" alt="Other">
+                <div class="card-body">
+                  <h5 class="card-title">Other</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                  <a href="#" class="btn btn-primary">Go Shopping</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-12 сol-md-12 text-center mt-4">
+            <!--блок на всю ширину родительского класса (row - 8 долей от общего)-->
+            <p>Can we help you?</p>
+          </div>
+          <div class="col-lg-12 сol-md-12 text-center"> <!--text-center - встроенный в bootstrap центровщик-->
+            <img class="call-anim" style="width:40px" src="source/files/phone.png" alt="...">
+          </div>
+        </div>
+
+        <!--боковая панель. Занимает 3 доли на пк и 12 на планшетах, т.е 
+        переносится вниз. Но сама внутри также делится на 12 долей-->
+        <div class="col-lg-3 col-md-12">
+          <div class="row px-2"> <!--px-2 отступ внутри ряда(но не внутри блоков-абзацев)-->
+
+            <div class="col-lg-12 sitebar mt-4"><!--для каждого окошка, в котором будет указан текст,
+            12 долей из 12 из родительского класса-->
+              <p>Lorem ipsum dolor sit amet  elit. Nam ad, soluta quisquam earum aperiam quia
+                eaque saepe voluptate necessitatibus ipsam, vitae reprehenderit? Voluptates expedita ex suscipit. <a
+                  href="#">Learn more...</a></p>
+            </div>
+
+            <div class="col-lg-12 sitebar mt-4"><!--для каждого окошка, в котором будет указан текст,
+              12 долей из 12 из родительского класса-->
+              <p>Lorem ipsum dolor sit amet cm quia
+                eaque saepe voluptate necessitatibus ipsam, vitae reprehenderit? Voluptates expedita ex suscipit. <a
+                  href="#">Learn more...</a></p>
+            </div>
+
+            <div class="col-lg-12 sitebar mt-4"><!--для каждого окошка, в котором будет указан текст,
+                12 долей из 12 из родительского класса-->
+              <p>Lorem ipsriam quia
+                eaque saepe voluptate necessitatibus ipsam, vitae reprehenderit? Voluptates expedita ex suscipit. <a
+                  href="#">Learn more...</a></p>
+            </div>
+
+            <div class="col-lg-12 sitebar mt-4"><!--для каждого окошка, в котором будет указан текст,
+                  12 долей из 12 из родительского класса-->
+              <p>Lorem ipsum dsectetur, adipisicing elit. Nam ad, soluta quisquam earum aperiam quia
+                eaque saepe voluptate necessitatibus ipsam, vitae reprehenderit? Voluptates expedita ex suscipit. <a
+                  href="#">Learn more...</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <footer class="mt-4"> <!--отступ 4 -->
+    <div class="cantainer-fluid">
+      <div class="row"> <!--display:flex-->
+        <div class="col-lg-4 col-md-12 footer-text text-center"> <!--text-center - центровка всего-->
+          <p>All rights reserved 2023</p>
+        </div> <!--col-lg-4 - чтоб разбить на 4 равные части, md-12 - для планшетов -->
+        <div class="col-lg-4 col-md-12 footer-text text-center">
+          <p>Contacts <br> Job <br> Our Team</p>
+        </div>
+        <div class="col-lg-4 col-md-12 media-links">
+          <img style="width:40px; margin-inline:1em"  src="source/files/yt.png" alt="...">
+          <img style="width:40px; margin-inline:1em" src="source/files/tg.png" alt="...">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <!--JS файлы лучше подключать в конце страницы, чтобы ускприть процесс загрузки сайта (html и css) -->
+</body>
+
+</html>

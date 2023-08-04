@@ -1,0 +1,47 @@
+.bg-video {
+  width: 100vw;
+  height: 70vh;
+  position: relative;
+  display: flex; /*чтобы можно было применить свойства 
+  (слои) - z-index*/
+  justify-content: center;
+  align-items: center;
+ }
+
+.bg-video video {
+  width: 100%;
+  height: 70vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  /*если видео прееполняет контейнер, то поля,
+  которые не вмещаются будут оберазны и будет центровано
+  по контейнеру*/
+  z-index: 1; 
+  opacity: 0.7; /*затемнение*/
+}
+
+.effect { /*затемнение(хз, не работает)*/
+  height: 70vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 2; /*чтобы был наравне с текстом*/
+  background-color: rgba(0, 0, 0, 0.222);
+}
+
+
+
+.video-text {
+  color: #fff;
+  z-index: 2;
+  font-size: 60px;
+  opacity: 0.8;
+  text-shadow: 2px 7px 8px #000000;
+  letter-spacing: 10px;
+}
+
+ 
